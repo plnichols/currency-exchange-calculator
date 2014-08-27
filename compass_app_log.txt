@@ -1,0 +1,49 @@
+2014-08-27 23:57:00    remove .sass-cache/ 
+2014-08-27 23:57:00    remove css/main.css 
+2014-08-27 23:59:02     error sass/main.scss (Line 9: File to import not found or unreadable: utilities/sprites.scss.
+Load paths:
+  W:/_WAMP/www/transferwise-app/sass
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/vendor/assets/stylesheets)
+2014-08-27 23:59:02    create css/main.css 
+2014-08-27 23:59:03     error sass/main.scss (Line 9: File to import not found or unreadable: utilities/sprites.scss.
+Load paths:
+  W:/_WAMP/www/transferwise-app/sass
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/vendor/assets/stylesheets)
+2014-08-27 23:59:03 identical css/main.css 
+2014-08-27 23:59:15 overwrite css/main.css 
+2014-08-28 00:00:40 overwrite css/main.css 
+2014-08-28 00:02:17 identical css/main.css 
+2014-08-28 00:02:43 overwrite css/main.css 
+2014-08-28 00:02:59 overwrite css/main.css 
+2014-08-28 00:03:26 overwrite css/main.css 
+2014-08-28 00:04:04 overwrite css/main.css 
+2014-08-28 00:11:33     error sass/main.scss (Line 3 of sass/components/_header.scss: Invalid CSS after "	font-size": expected ";", was ": 2.2em;")
+2014-08-28 00:11:33 overwrite css/main.css 
+2014-08-28 00:11:34     error sass/main.scss (Line 3 of sass/components/_header.scss: Invalid CSS after "	font-size": expected ";", was ": 2.2em;")
+2014-08-28 00:11:34 identical css/main.css 
+2014-08-28 00:11:49 overwrite css/main.css 
+2014-08-28 00:11:56 overwrite css/main.css 
+2014-08-28 00:13:14 overwrite css/main.css 
+2014-08-28 00:13:54 overwrite css/main.css 
+2014-08-28 00:14:23 overwrite css/main.css 
+2014-08-28 00:14:45 overwrite css/main.css 
+2014-08-28 00:15:01 overwrite css/main.css 
+2014-08-28 00:15:16 overwrite css/main.css 

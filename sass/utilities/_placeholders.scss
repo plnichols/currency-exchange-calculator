@@ -1,0 +1,5 @@
+%clearfix {
+    &:before, &:after { content:" "; display:table; }  // For modern browsers
+    &:after { clear:both; }
+    & { *zoom:1; }  // For IE 6/7 (trigger hasLayout)
+}

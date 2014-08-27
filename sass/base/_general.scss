@@ -1,0 +1,28 @@
+body {
+	font: $body-font-size/($body-font-size*1.5) Arial, Helvetica, Helvetica Neue;
+	color: #333;
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+.hidden {
+	display: none;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+a {
+	color: inherit;
+}

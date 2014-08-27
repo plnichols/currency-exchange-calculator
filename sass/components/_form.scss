@@ -1,0 +1,96 @@
+.form {
+	font-size: 0.688em;
+	margin: 0.5em 0;
+
+	input {
+		margin: 0.125em;
+		padding: 0.325em 0.5em 0.2em;
+		border: 1px solid #0C78B2;
+		@include border-radius(0.3em);
+
+		&[type="text"] {
+			width: 8em;
+		}
+	}
+}
+
+.login-form {
+	float: right;
+	clear: right;
+	.logged-in & {
+		display: none;
+	}
+	.placeholder {
+		display: none;
+		color: #fff;
+		margin: 0 0.25em 0 0.5em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.login-form-container {
+		display: none;
+		.login-form-opened & {
+			display: block;
+		}
+	}
+	.login-form {
+		border-top: 1px solid $secondary-nav-borders;
+		width: 100%;
+		text-align: center;
+		padding: 2em 0;
+		margin: 0;
+		input {
+			&[type="text"],
+			&[type="submit"] {
+				width: 100%;
+				margin: 0.15em 0;
+				font-size: 1.5em;
+				padding: 0.5em;
+			}
+		}
+		.lt-ie10 & {
+			.placeholder {
+				display: block;
+				float: left;
+				width: 25%;
+				text-align: left;
+				font-size: 1.2em;
+				margin: 0.5em 0 0;
+			}
+			input {
+				&[type="text"] {
+					width: 75%;
+				}
+				&[type="submit"] {
+					width: 75%;
+					margin-left: 25%;
+				}
+			}
+		}
+	}
+}
+
+.login-connected {
+	display: none;
+	float: right;
+	clear: right;
+	color: #fff;
+	font-size: 0.688em;
+	margin-top: 0.65em;
+	.logged-in & {
+		display: block;
+	}
+	.login-connected-logout {
+		color: #8BAFC1;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.login-connected {
+		float: none;
+		text-align: center;
+		padding: 0 1em 1em;
+		font-size: 1em;
+	}
+}

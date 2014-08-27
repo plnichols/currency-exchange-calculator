@@ -1,0 +1,11 @@
+.container {
+	@extend %clearfix;
+	width: 80%;
+	max-width: 300px;
+	min-width: 200px;
+	padding: 1em 1.5em;
+	margin: 1em auto;
+	border: 1px solid #e7e7e7;
+	@include border-radius(5px);
+	@include box-shadow(rgba(0,0,0,0.3) 0 2px 7px -2px);
+}
