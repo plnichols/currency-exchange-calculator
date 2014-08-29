@@ -3,7 +3,6 @@
 @import "compass/css3";
 
 /* Loading utilities (mixins/functions/etc) */
-@import "utilities/variables.scss";
 @import "utilities/placeholders.scss";
 @import "utilities/mixins.scss";
 
@@ -16,4 +15,8 @@
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/content.scss";
+@import "components/tooltip.scss";
+@import "components/transfer-details.scss";
+@import "components/transfer-priority.scss";
+@import "components/transfer-info.scss";
 

@@ -1,0 +1,53 @@
+.tooltip {
+	position: relative;
+	display: inline-block;
+	margin-left: 1em;
+	background-color: #d3d3d3;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-indent: -1px;
+	text-align: center;
+	cursor: pointer;
+	@include border-radius(0.65em);
+	&:before {
+		display: none;
+		content:attr(data-tooltip-info);
+		position: absolute;
+		width: 16em;
+		bottom: 140%;
+		left: 50%;
+		margin-left: -8em;
+		padding: 0.5em;
+		color: #103651;
+		font-weight: normal;
+		font-size: 0.7rem;
+		background-color: #ddd;
+		border: 1px solid #bbb;
+		@include border-radius(5px);
+	}
+	&:after {
+		display: none;
+		content:"";
+		position: absolute;
+		bottom: 115%;
+		left: 30%;
+		margin-left: -3px;
+		@include arrow(top, bottom, 6px, 5px, #bbb);
+	}
+	&:hover:before,
+	&:hover:after {
+		display: block;
+	}
+}
+.tooltip-plus {
+	font-size: 14px;
+	text-indent: 0;
+}
+.tooltip-dark {
+	background-color: #a4a4a4; // Old browsers
+	@include background-image(linear-gradient(#a4a4a4, #757575));
+}

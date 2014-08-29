@@ -3,15 +3,3 @@
     border-#{$base}: #{$length} solid #{$color};
     border-#{$point} : none;
 }
-
-
-@mixin verticalAlign($sprites, $name) {
-    top:50%;
-    margin-top: - image-height(sprite-file($sprites, $name))/2
-}
-
-
-@mixin horizontalAlign($sprites, $name) {
-    left:50%;
-    margin-left: - image-width(sprite-file($sprites, $name))/2
-}

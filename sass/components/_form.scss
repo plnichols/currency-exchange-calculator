@@ -1,96 +1,64 @@
 .form {
-	font-size: 0.688em;
+	font-size: 1em;
 	margin: 0.5em 0;
+}
 
-	input {
-		margin: 0.125em;
-		padding: 0.325em 0.5em 0.2em;
-		border: 1px solid #0C78B2;
-		@include border-radius(0.3em);
+fieldset {
+	border: 0;
+	margin: 0.8em 0;
+	padding: 0;
+}
 
-		&[type="text"] {
-			width: 8em;
-		}
+.input-text {
+	font-size: 0.8em;
+	width: 34%;
+	height: 2.15em;
+	line-height: 2.15em;
+	padding: 0 2%;
+	border: 1px solid #b3b3b3;
+	@include border-radius(3px);
+	@include box-shadow(rgba(0,0,0,0.1) 0 0 1px 2px);
+	&[readonly] {
+		color: #aaa;
 	}
 }
 
-.login-form {
-	float: right;
-	clear: right;
-	.logged-in & {
-		display: none;
-	}
-	.placeholder {
-		display: none;
-		color: #fff;
-		margin: 0 0.25em 0 0.5em;
-	}
+.input-checkbox {
+	position: relative;
+	top: 2px;
+	margin-right: 0.5em;
 }
 
-@media screen and (max-width: 600px) {
-	.login-form-container {
-		display: none;
-		.login-form-opened & {
-			display: block;
-		}
-	}
-	.login-form {
-		border-top: 1px solid $secondary-nav-borders;
-		width: 100%;
-		text-align: center;
-		padding: 2em 0;
-		margin: 0;
-		input {
-			&[type="text"],
-			&[type="submit"] {
-				width: 100%;
-				margin: 0.15em 0;
-				font-size: 1.5em;
-				padding: 0.5em;
-			}
-		}
-		.lt-ie10 & {
-			.placeholder {
-				display: block;
-				float: left;
-				width: 25%;
-				text-align: left;
-				font-size: 1.2em;
-				margin: 0.5em 0 0;
-			}
-			input {
-				&[type="text"] {
-					width: 75%;
-				}
-				&[type="submit"] {
-					width: 75%;
-					margin-left: 25%;
-				}
-			}
-		}
-	}
-}
-
-.login-connected {
-	display: none;
-	float: right;
-	clear: right;
+.input-submit {
+	font-size: 1.25em;
+	font-weight: bold;
 	color: #fff;
-	font-size: 0.688em;
-	margin-top: 0.65em;
-	.logged-in & {
-		display: block;
-	}
-	.login-connected-logout {
-		color: #8BAFC1;
+	width: 100%;
+	padding: 0.4em;
+	margin: 0.8em 0;
+	border: 0;
+	@include border-radius(5px);
+	background-color: #32a700; // Old browsers
+	@include filter-gradient(#98d37f, #32a700, vertical); // IE6-9
+	@include background-image(linear-gradient(#98d37f, #32a700));
+	&:hover,
+	&:active {
+		background-color: #2f9602; // Old browsers
+		@include filter-gradient(#a6e989, #2f9602, vertical); // IE6-9
+		@include background-image(linear-gradient(#a6e989, #2f9602));
 	}
 }
 
-@media screen and (max-width: 600px) {
-	.login-connected {
-		float: none;
-		text-align: center;
-		padding: 0 1em 1em;
-		font-size: 1em;
-	}
+.select {
+	font-size: 0.8em;
+	width: 27%;
+	padding-left: 2%;
+	margin-top: 1px;
+	height: 2.3em;
+	line-height: 2.3em;
+	border: 1px solid #cecece;
+	@include border-radius(3px);
+	background-color: #e0e0e0; // Old browsers
+	@include filter-gradient(#fcfcfc, #e0e0e0, vertical); // IE6-9
+	@include background-image(linear-gradient(#fcfcfc, #e0e0e0));
 }

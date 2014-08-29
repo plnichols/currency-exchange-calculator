@@ -18,19 +18,78 @@
     <div class="container">
         <h1 class="title">Calculate and create a transfer</h1>
 
-        <div class="content">
+        <form class="transfer form" action="">
 
-        </div>
+            <div class="transfer-details">
+                <fieldset>
+                    <label class="label label-small" for="youPay">You Pay</label>
+                    <input class="input-text" type="text" id="youPay" value="" />
+                    <select class="select" name="youPayCurrency" id="youPayCurrency">
+                        <option value="eur">EUR</option>
+                        <option value="usd">USD</option>
+                        <option value="gbp">GBP</option>
+                    </select>
+                </fieldset>
 
-        <footer class="footer">
-            <ul class="list">
-                <li class="list-item"><a href="#">Footer Link 1</a></li>
-                <li class="list-item"><a href="#">Footer Link 2</a></li>
-                <li class="list-item"><a href="#">Footer Link 3</a></li>
-                <li class="list-item"><a href="#">Footer Link 4</a></li>
-                <li class="list-item"><a href="#">Footer Link 5</a></li>
-            </ul>
-            <p class="copyright">Copyright 2014 &copy; Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <fieldset>
+                    <label class="label label-small" for="youGet">You Get</label>
+                    <input class="input-text" type="text" id="youGet" value="1,245" readonly="readonly" />
+                    <select class="select" name="youGetCurrency" id="youGetCurrency">
+                        <option value="eur">EUR</option>
+                        <option value="usd">USD</option>
+                        <option value="gbp">GBP</option>
+                    </select>
+                </fieldset>
+
+                <div class="fixed-amount">
+                    <input class="input-checkbox" type="checkbox" value="fixed" id="receiveFixedAmount">
+                    <label class="label" for="receiveFixedAmount">
+                        Receive fixed amount <span class="tooltip" data-tooltip-info="Lorem ipsum sit dolor ammet">?</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="transfer-priority">
+                <fieldset>
+                    <label class="label" for="priority">
+                        Priority payment? <span class="tooltip" data-tooltip-info="Lorem ipsum sit dolor ammet">?</span>
+                    </label>
+                    <select class="select" name="priority" id="priority">
+                        <option value="no">NO</option>
+                        <option value="yes">YES</option>
+                    </select>
+                </fieldset>
+
+                <p class="transfer-priority-info">Payment will be received no later than:</p>
+                <p class="transfer-priority-date">Mon 25th March</p>
+            </div>
+
+            <div class="transfer-info">
+                <ul class="list">
+                    <li class="transfer-info-item list-item">
+                        <span class="desc">
+                            Deposit <span class="tooltip tooltip-dark tooltip-plus" data-tooltip-info="Lorem ipsum sit dolor ammet">+</span>
+                        </span>
+                        <span class="info">&euro; 1,000.00</span>
+                    </li>
+                    <li class="transfer-info-item list-item">
+                        <span class="desc">Estimated exchange rate <span class="tooltip tooltip-dark tooltip-plus" data-tooltip-info="Lorem ipsum sit dolor ammet">+</span></span>
+                        <span class="info">0.85353</span>
+                    </li>
+                    <li class="transfer-info-item transfer-info-final list-item">
+                        <span class="desc">You get (estimated)</span>
+                        <span class="info">LTL 1,1542.25</span>
+                    </li>
+                    <input class="input-submit" type="submit" value="Create a transfer" />
+                </ul>
+            </div>
+            
+        </form>
+
+        <footer>
+            <h2>After creating a transfer</h2>
+            <p><strong>Make a bank transfer</strong> in your currency to the TransferWise bank account.</p>
+            <p><strong>We make the conversion</strong> and pay the recipient in the required currency.</p>
         </footer>
     </div>
 

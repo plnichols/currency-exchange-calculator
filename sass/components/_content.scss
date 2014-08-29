@@ -3,9 +3,29 @@
 	width: 80%;
 	max-width: 300px;
 	min-width: 200px;
-	padding: 1em 1.5em;
+	padding: 1em 1.4em;
 	margin: 1em auto;
 	border: 1px solid #e7e7e7;
 	@include border-radius(5px);
 	@include box-shadow(rgba(0,0,0,0.3) 0 2px 7px -2px);
+	background-color: #ffffff; // Old browsers
+	@include filter-gradient(#ffffff, #f1f1f1, vertical); // IE6-9
+	@include background-image(linear-gradient(top, #ffffff 50%,#f1f1f1 99%));
+}
+
+.transfer > [class*="transfer-"] {
+	position: relative;
+	padding-bottom: 1.2em;
+	margin-bottom: 1.5em;
+	border-bottom: 1px solid #e8e8e8;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		width: 100%;
+		height: 0;
+		border-bottom: 1px solid #fff;
+	}
 }

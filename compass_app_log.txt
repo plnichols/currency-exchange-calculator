@@ -47,3 +47,193 @@ Load paths:
 2014-08-28 00:14:45 overwrite css/main.css 
 2014-08-28 00:15:01 overwrite css/main.css 
 2014-08-28 00:15:16 overwrite css/main.css 
+2014-08-28 21:33:09 overwrite css/main.css 
+2014-08-28 21:34:53 overwrite css/main.css 
+2014-08-28 21:35:14 overwrite css/main.css 
+2014-08-28 21:36:40 overwrite css/main.css 
+2014-08-28 21:36:46 overwrite css/main.css 
+2014-08-28 21:39:21 overwrite css/main.css 
+2014-08-28 21:40:07 overwrite css/main.css 
+2014-08-28 21:40:15 overwrite css/main.css 
+2014-08-28 21:40:42 overwrite css/main.css 
+2014-08-28 21:41:25 overwrite css/main.css 
+2014-08-28 21:41:29 overwrite css/main.css 
+2014-08-28 21:41:35 overwrite css/main.css 
+2014-08-28 21:43:58     error sass/main.scss (Line 31 of sass/components/_form.scss: Undefined mixin 'linear-gradient'.)
+2014-08-28 21:43:58 overwrite css/main.css 
+2014-08-28 21:45:06 overwrite css/main.css 
+2014-08-28 21:46:07 overwrite css/main.css 
+2014-08-28 21:47:28 overwrite css/main.css 
+2014-08-28 21:48:09 overwrite css/main.css 
+2014-08-28 21:50:31 overwrite css/main.css 
+2014-08-28 21:51:09 overwrite css/main.css 
+2014-08-28 21:52:21 overwrite css/main.css 
+2014-08-28 21:52:38 overwrite css/main.css 
+2014-08-28 21:54:08     error sass/main.scss (Line 2 of sass/base/_general.scss: Undefined variable: "$body-font-size\/".)
+2014-08-28 21:54:08 overwrite css/main.css 
+2014-08-28 21:54:38 overwrite css/main.css 
+2014-08-28 21:55:08 overwrite css/main.css 
+2014-08-28 21:55:38 overwrite css/main.css 
+2014-08-28 21:58:23    create css/components/transfer-details.css 
+2014-08-28 22:01:07 overwrite css/main.css 
+2014-08-28 22:01:42 identical css/main.css 
+2014-08-28 22:01:58 overwrite css/main.css 
+2014-08-28 22:02:48 overwrite css/main.css 
+2014-08-28 22:04:28 overwrite css/main.css 
+2014-08-28 22:05:15 overwrite css/main.css 
+2014-08-28 22:07:25 overwrite css/main.css 
+2014-08-28 22:08:12 overwrite css/main.css 
+2014-08-28 22:08:53 overwrite css/main.css 
+2014-08-28 22:09:16 overwrite css/main.css 
+2014-08-28 22:09:22 overwrite css/main.css 
+2014-08-28 22:12:32 overwrite css/main.css 
+2014-08-28 22:12:46 overwrite css/main.css 
+2014-08-28 22:13:17 overwrite css/main.css 
+2014-08-28 22:15:55     error sass/main.scss (Line 19: File to import not found or unreadable: components/toooltip.scss.
+Load paths:
+  W:/_WAMP/www/transferwise-app/sass
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/vendor/assets/stylesheets)
+2014-08-28 22:15:55 overwrite css/main.css 
+2014-08-28 22:15:58 overwrite css/main.css 
+2014-08-28 22:17:43 overwrite css/main.css 
+2014-08-28 22:21:15 overwrite css/main.css 
+2014-08-28 22:23:25 overwrite css/main.css 
+2014-08-28 22:23:32 overwrite css/main.css 
+2014-08-28 22:24:03 overwrite css/main.css 
+2014-08-28 22:24:22 overwrite css/main.css 
+2014-08-28 22:24:29 overwrite css/main.css 
+2014-08-28 22:24:51 overwrite css/main.css 
+2014-08-28 22:25:04 overwrite css/main.css 
+2014-08-28 22:25:15 overwrite css/main.css 
+2014-08-28 22:28:42 overwrite css/main.css 
+2014-08-28 22:31:09 overwrite css/main.css 
+2014-08-28 22:31:35 overwrite css/main.css 
+2014-08-28 22:31:42 overwrite css/main.css 
+2014-08-28 22:35:23 overwrite css/main.css 
+2014-08-28 22:36:00 overwrite css/main.css 
+2014-08-28 22:36:19 overwrite css/main.css 
+2014-08-28 22:36:55 overwrite css/main.css 
+2014-08-28 22:41:45 overwrite css/main.css 
+2014-08-28 22:43:57 overwrite css/main.css 
+2014-08-28 22:45:10 overwrite css/main.css 
+2014-08-28 22:45:25 overwrite css/main.css 
+2014-08-28 22:45:54 overwrite css/main.css 
+2014-08-28 22:46:56 overwrite css/main.css 
+2014-08-28 22:48:21 overwrite css/main.css 
+2014-08-28 22:49:36 overwrite css/main.css 
+2014-08-28 22:49:46 overwrite css/main.css 
+2014-08-28 22:50:14 overwrite css/main.css 
+2014-08-28 22:53:05 overwrite css/main.css 
+2014-08-28 22:57:07 overwrite css/main.css 
+2014-08-28 22:58:21 overwrite css/main.css 
+2014-08-28 22:58:55 overwrite css/main.css 
+2014-08-28 22:59:54 overwrite css/main.css 
+2014-08-28 23:01:12 overwrite css/main.css 
+2014-08-28 23:01:18 overwrite css/main.css 
+2014-08-28 23:24:44 overwrite css/main.css 
+2014-08-28 23:25:04 overwrite css/main.css 
+2014-08-28 23:26:37 overwrite css/main.css 
+2014-08-28 23:26:42 overwrite css/main.css 
+2014-08-28 23:29:02 overwrite css/main.css 
+2014-08-28 23:30:20 identical css/main.css 
+2014-08-28 23:30:47 overwrite css/main.css 
+2014-08-28 23:31:22 overwrite css/main.css 
+2014-08-28 23:31:39 overwrite css/main.css 
+2014-08-28 23:32:16     error sass/main.scss (Line 22 of sass/components/_transfer-info.scss: Invalid CSS after "	@include ": expected identifier, was "%clearfix;")
+2014-08-28 23:32:16 overwrite css/main.css 
+2014-08-28 23:32:17     error sass/main.scss (Line 22 of sass/components/_transfer-info.scss: Invalid CSS after "	@include ": expected identifier, was "%clearfix;")
+2014-08-28 23:32:17 identical css/main.css 
+2014-08-28 23:32:51 overwrite css/main.css 
+2014-08-28 23:33:25 overwrite css/main.css 
+2014-08-28 23:34:11 overwrite css/main.css 
+2014-08-28 23:34:13 identical css/main.css 
+2014-08-28 23:34:32 overwrite css/main.css 
+2014-08-28 23:35:01 overwrite css/main.css 
+2014-08-28 23:35:20 overwrite css/main.css 
+2014-08-28 23:35:45 overwrite css/main.css 
+2014-08-28 23:35:55 overwrite css/main.css 
+2014-08-28 23:36:13 overwrite css/main.css 
+2014-08-28 23:38:01 overwrite css/main.css 
+2014-08-28 23:40:46 overwrite css/main.css 
+2014-08-28 23:41:41 overwrite css/main.css 
+2014-08-28 23:42:08 overwrite css/main.css 
+2014-08-28 23:43:00 overwrite css/main.css 
+2014-08-28 23:43:26 overwrite css/main.css 
+2014-08-28 23:44:53 overwrite css/main.css 
+2014-08-28 23:45:16 overwrite css/main.css 
+2014-08-28 23:45:47 overwrite css/main.css 
+2014-08-28 23:46:06 overwrite css/main.css 
+2014-08-28 23:48:31 overwrite css/main.css 
+2014-08-28 23:48:50 overwrite css/main.css 
+2014-08-28 23:50:25 identical css/main.css 
+2014-08-28 23:51:15 overwrite css/main.css 
+2014-08-28 23:52:01 overwrite css/main.css 
+2014-08-28 23:52:15 overwrite css/main.css 
+2014-08-28 23:52:33 overwrite css/main.css 
+2014-08-28 23:52:37 overwrite css/main.css 
+2014-08-28 23:52:59 overwrite css/main.css 
+2014-08-28 23:54:01     error sass/main.scss (Line 23: File to import not found or unreadable: components/transfer-actions.scss.
+Load paths:
+  W:/_WAMP/www/transferwise-app/sass
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/vendor/assets/stylesheets)
+2014-08-28 23:54:01 overwrite css/main.css 
+2014-08-28 23:54:02     error sass/main.scss (Line 23: File to import not found or unreadable: components/transfer-actions.scss.
+Load paths:
+  W:/_WAMP/www/transferwise-app/sass
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/vendor/assets/stylesheets)
+2014-08-28 23:54:02 identical css/main.css 
+2014-08-28 23:54:07 overwrite css/main.css 
+2014-08-28 23:55:11 overwrite css/main.css 
+2014-08-28 23:55:51 overwrite css/main.css 
+2014-08-28 23:55:58 overwrite css/main.css 
+2014-08-28 23:58:29 overwrite css/main.css 
+2014-08-28 23:59:15 overwrite css/main.css 
+2014-08-29 00:00:23 overwrite css/main.css 
+2014-08-29 00:00:40 overwrite css/main.css 
+2014-08-29 00:00:58 overwrite css/main.css 
+2014-08-29 00:01:02 identical css/main.css 
+2014-08-29 00:01:21 overwrite css/main.css 
+2014-08-29 00:01:36 overwrite css/main.css 
+2014-08-29 00:04:19 overwrite css/main.css 
+2014-08-29 00:04:35    remove .sass-cache/ 
+2014-08-29 00:04:35    remove css/main.css 
+2014-08-29 00:04:38    create css/main.css 
+2014-08-29 00:05:52 identical css/main.css 
+2014-08-29 00:06:55 overwrite css/main.css 
+2014-08-29 00:07:11 overwrite css/main.css 
+2014-08-29 00:08:02 overwrite css/main.css 
+2014-08-29 00:08:15 identical css/main.css 
+2014-08-29 00:08:40 identical css/main.css 
+2014-08-29 00:10:52 overwrite css/main.css 
+2014-08-29 00:13:37 overwrite css/main.css 
+2014-08-29 00:13:56 overwrite css/main.css 
+2014-08-29 00:14:25 overwrite css/main.css 
+2014-08-29 00:15:51 overwrite css/main.css 
+2014-08-29 00:16:33 overwrite css/main.css 
