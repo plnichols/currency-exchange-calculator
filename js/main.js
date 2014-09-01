@@ -1,69 +1,84 @@
-var App = (function() {
+var app = angular.module('app', []);
 
-    var body = $("body"),
-        elems = $("[data-mobile-toggle]"),
-        allClasses = "";
 
-    function stickyTopNav() {
-        var header = $(".header-container"),
-            nav = $(".secondary-nav-container"),
-            headerHeight = 0,
-            navHeight = 0;
+app.controller('CreateTransfer', function($scope, $http, Currencies) {
+    // Set model
+    $scope.Currencies = Currencies;
+    $scope.CurrenciesOutput = {};
+    $scope.loading = true;
 
-        $(window).scroll(function () { 
-            headerHeight = header.outerHeight();
-            navHeight = nav.outerHeight()
-            
-            if ($(this).scrollTop() > headerHeight) {
-                body.addClass("sticky");
-                // header.css("margin-bottom",navHeight);
-            } else {
-                body.removeClass("sticky");
-                header.removeAttr("style");
-            }
-        });
+    // Set default amount
+    $scope.transferAmount = 1000;
+    $scope.transferPayout = 0;
+    $scope.transferRate = 0;
+
+    // Set default currency codes
+    $scope.currencyInputCode = "GBP";
+    $scope.currencyOutputCode = "EUR";
+
+    $scope.changeCurrency = function() {
+        $scope.loading = true;
+        $scope.getOutputCurrencies();
     }
 
-    function toggleEvents() {
-        for(var i=0; i<elems.length; i++) {
-            $(elems[i]).on("click", function(){
-                toggleMobile($(this).data("mobile-toggle"));
+    $scope.getOutputCurrencies = function() {
+        for (var i=0; i < $scope.Currencies.list.length; i++) {
+            if ($scope.currencyInputCode == $scope.Currencies.list[i].currencyCode) {
+                $scope.CurrenciesOutput.list = $scope.Currencies.list[i].targetCurrencies;
+                $scope.getTransferDetails();
+                break;
+            }
+        }
+    }
+
+    $scope.getTransferDetails = function() {
+        $http.get('./proxy/api_proxy.php?param=payment%2Fcalculate%3Famount%3D'+$scope.transferAmount+'%26sourceCurrency%3D'+$scope.currencyInputCode+'%26targetCurrency%3D'+$scope.currencyOutputCode)
+            .success(function (data) {
+                if (!data.errors) {
+                    // No error - get transfer details
+                    $scope.transferPayout = data.transferwisePayOut.toFixed(2);
+                    $scope.transferRate = data.transferwiseRate;
+                    $scope.loading = false;
+                }else if(data.errors[0].code == "EQUAL_CCY") {
+                    // Tried to transfer same currency - get first output currency and recalculate
+                    $scope.currencyOutputCode = $scope.CurrenciesOutput.list[0].currencyCode;
+                    $scope.changeCurrency();
+                }else{
+                    // Other error - reset to defaults and recalculate
+                    $scope.currencyInputCode = "GBP";
+                    $scope.currencyOutputCode = "EUR";
+                    $scope.changeCurrency();
+                }
+            })
+            .error(function (data, status, headers, config) {
+                console.log("error");
+                $scope.loading = false;
             });
-            allClasses += $(elems[i]).data("mobile-toggle") + " ";
+    }
+
+    // When CUrrencies.list changes, update output currencies <select> model
+    $scope.$watch('Currencies.list', function() {
+        if ($scope.Currencies.list && $scope.Currencies.list.length > 0) {
+            $scope.getOutputCurrencies();
         };
-    }
+    });
 
-    function toggleMobile(thisclass) {
-        if(body.hasClass(thisclass)) {
-            body.removeClass(allClasses);
-        }else{
-            body.removeClass(allClasses).addClass(thisclass);
-        }
-    }
+});
 
-    function submitLoginForm() {
-        $("#login-form").on("submit", function(e){
-            e.preventDefault();
-            var username = $(this).find("#username").val(),
-                password = $(this).find("#password").val();
-                
-            if(username && password){
-                $(this).hide();
-                $(".login-connected").show().find(".login-connected-name").text(username);
-                $(".list-mobile .login").text("Account");
-            }else{
-                alert("Please enter a username and password.")
-            }
+
+
+// Return list of currencies from ajax call
+app.factory('Currencies', function($http) {
+    var Currencies = {};
+
+    $http.get('./proxy/api_proxy.php?param=currency%2Fpairs')
+        .success(function (data) {
+            Currencies.list = data.sourceCurrencies;
+            Currencies.total = data.total;
         })
-    }
+        .error(function (data, status, headers, config) {
+            console.log("error");
+        });
 
-    return {
-        init : function() {
-            stickyTopNav();
-            toggleEvents();
-            submitLoginForm();
-        }
-    };
-})();
-
-App.init();
+    return Currencies;
+});

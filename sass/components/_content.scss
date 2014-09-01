@@ -1,5 +1,6 @@
 .container {
 	@extend %clearfix;
+	position: relative;
 	width: 80%;
 	max-width: 300px;
 	min-width: 200px;

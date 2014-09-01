@@ -5,17 +5,15 @@
 		list-style: none;
 		font-size: 0.75em;
 	}
+	.list-item {
+		display: table;
+		width: 100%;
+	}
 	.desc,
 	.info {
-		display: block;
-	}
-	.desc {
-		float: left;
-		width: 75%;
+		display: table-cell;
 	}
 	.info {
-		float: right;
-		width: 25%;
 		text-align: right;
 		font-weight: bold;
 		color: #222;
@@ -26,10 +24,6 @@
 	margin: 1em 0;
 }
 .transfer-info-final {
-	.desc,
-	.info {
-		width: 50%;
-	}
 	.desc {
 		padding-top: 0.25em;
 	}
