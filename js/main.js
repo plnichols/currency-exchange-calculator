@@ -1,24 +1,32 @@
 var app = angular.module('app', []);
 
 
-app.controller('CreateTransfer', function($scope, $http, Currencies) {
+app.controller('CreateTransfer', function($scope, $http, $timeout, Currencies) {
     // Set model
     $scope.Currencies = Currencies;
     $scope.CurrenciesOutput = {};
-    $scope.loading = true;
 
-    // Set default amount
+    // Set variables
     $scope.transferAmount = 1000;
     $scope.transferPayout = 0;
     $scope.transferRate = 0;
+    $scope.loading = true;
+    $scope.fixedAmount = false;
 
     // Set default currency codes
     $scope.currencyInputCode = "GBP";
     $scope.currencyOutputCode = "EUR";
 
+
+
+
     $scope.changeCurrency = function() {
         $scope.loading = true;
         $scope.getOutputCurrencies();
+    }
+
+    $scope.toggleFixedAmount = function() {
+        $scope.fixedAmount = !$scope.fixedAmount;
     }
 
     $scope.getOutputCurrencies = function() {
@@ -32,11 +40,22 @@ app.controller('CreateTransfer', function($scope, $http, Currencies) {
     }
 
     $scope.getTransferDetails = function() {
-        $http.get('./proxy/api_proxy.php?param=payment%2Fcalculate%3Famount%3D'+$scope.transferAmount+'%26sourceCurrency%3D'+$scope.currencyInputCode+'%26targetCurrency%3D'+$scope.currencyOutputCode)
+        var amount = ($scope.fixedAmount) ? $scope.transferPayout : $scope.transferAmount;
+        var amountCurrency = ($scope.fixedAmount) ? "target" : "source";
+
+        $http.get('./proxy/api_proxy.php?param=payment%2Fcalculate' +
+                        '%3Famount%3D'+ amount +
+                        '%26sourceCurrency%3D' + $scope.currencyInputCode +
+                        '%26targetCurrency%3D' + $scope.currencyOutputCode +
+                        '%26amountCurrency%3D' + amountCurrency)
             .success(function (data) {
                 if (!data.errors) {
                     // No error - get transfer details
-                    $scope.transferPayout = data.transferwisePayOut.toFixed(2);
+                    if ($scope.fixedAmount) {
+                        $scope.transferAmount = data.transferwisePayIn.toFixed(2);
+                    }else{
+                        $scope.transferPayout = data.transferwisePayOut.toFixed(2);
+                    }
                     $scope.transferRate = data.transferwiseRate;
                     $scope.loading = false;
                 }else if(data.errors[0].code == "EQUAL_CCY") {
@@ -56,7 +75,48 @@ app.controller('CreateTransfer', function($scope, $http, Currencies) {
             });
     }
 
-    // When CUrrencies.list changes, update output currencies <select> model
+    $scope.submitTransfer = function() {
+        var amount = ($scope.fixedAmount) ? $scope.transferPayout : $scope.transferAmount;
+        var amountCurrency = ($scope.fixedAmount) ? "target" : "source";
+
+        // Currency IDs are hardcoded 
+        // Unable to find documentation on how to transform currency code into currency id
+        window.location.href = "https://transferwise.com/request/placeOrder" + 
+                                    "?sourceValue=" + amount + 
+                                    "&sourceCurrencyId=2" + /*$scope.currencyInputCode + */
+                                    "&targetCurrencyId=1" + /*$scope.currencyOutputCode + */
+                                    "&fixType=" + amountCurrency.toUpperCase();
+    }
+
+
+
+
+    var timeoutPromise;
+
+    // Watch amount for changes, update transfer/payout value
+    // Using timeout to reduce number of ajax calls when typing amount
+    $scope.$watch("transferAmount", function () {
+        $timeout.cancel(timeoutPromise);
+
+        timeoutPromise = $timeout(function(){
+            if (!$scope.fixedAmount) {
+                $scope.getTransferDetails();
+            };
+        }, 500);
+    });
+
+    $scope.$watch("transferPayout", function () {
+        $timeout.cancel(timeoutPromise);
+
+        timeoutPromise = $timeout(function(){
+            if ($scope.fixedAmount) {
+                $scope.getTransferDetails();
+            };
+        }, 500);
+    });
+    
+
+    // Watch CUrrencies.list for changes, update output currencies <select> model
     $scope.$watch('Currencies.list', function() {
         if ($scope.Currencies.list && $scope.Currencies.list.length > 0) {
             $scope.getOutputCurrencies();
@@ -74,7 +134,6 @@ app.factory('Currencies', function($http) {
     $http.get('./proxy/api_proxy.php?param=currency%2Fpairs')
         .success(function (data) {
             Currencies.list = data.sourceCurrencies;
-            Currencies.total = data.total;
         })
         .error(function (data, status, headers, config) {
             console.log("error");

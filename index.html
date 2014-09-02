@@ -18,12 +18,12 @@
     <div class="container" ng-controller="CreateTransfer">
         <h1 class="title">Calculate and create a transfer</h1>
 
-        <form class="transfer form" action="">
+        <form class="transfer form" ng-submit="submitTransfer()">
 
             <div class="transfer-details">
                 <fieldset>
                     <label class="label label-small" for="youPay">You Pay</label>
-                    <input class="input-text" type="text" id="youPay" ng-model="transferAmount" />
+                    <input class="input-text" type="text" id="youPay" ng-model="transferAmount" ng-readonly="fixedAmount" />
                     <select class="select" name="youPayCurrency" id="youPayCurrency" ng-model="currencyInputCode" ng-change="changeCurrency()">
                         <option ng-repeat="step in Currencies.list">{{step.currencyCode}}</option>
                     </select>
@@ -31,14 +31,14 @@
 
                 <fieldset>
                     <label class="label label-small" for="youGet">You Get</label>
-                    <input class="input-text" type="text" id="youGet" ng-model="transferPayout" readonly="readonly" />
+                    <input class="input-text" type="text" id="youGet" ng-model="transferPayout" ng-readonly="!fixedAmount" />
                     <select class="select" name="youGetCurrency" id="youGetCurrency" ng-model="currencyOutputCode" ng-change="changeCurrency()">
                         <option ng-repeat="step in CurrenciesOutput.list">{{step.currencyCode}}</option>
                     </select>
                 </fieldset>
 
                 <div class="fixed-amount">
-                    <input class="input-checkbox" type="checkbox" value="fixed" id="receiveFixedAmount">
+                    <input class="input-checkbox" type="checkbox" value="fixed" id="receiveFixedAmount" ng-click="toggleFixedAmount()">
                     <label class="label" for="receiveFixedAmount">
                         Receive fixed amount <span class="tooltip" data-tooltip-info="Lorem ipsum sit dolor ammet">?</span>
                     </label>
