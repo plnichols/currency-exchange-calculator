@@ -1,6 +1,9 @@
-Transfer Payment Calculator
-================================
+# Transfer Payment Calculator
 
-AngularJS app to get currency exchange rate from API and initiate transfer.
+### Technical Test - Transfer Wise
 
-http://plnichols.github.io/currency-exchange-calculator/ (API not available anymore)
+AngularJS app to get the currency exchange rate from API and initiate a transfer.
+
+⚠️ API not available anymore
+
+http://plnichols.github.io/currency-exchange-calculator/ 
